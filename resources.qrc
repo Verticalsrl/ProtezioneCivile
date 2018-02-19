@@ -1,0 +1,14 @@
+<RCC>
+	<qresource prefix="/plugins/ProtezioneCivile" >
+        <file>search_address.png</file>
+    </qresource>
+	<qresource prefix="/plugins/ProtezioneCivile" >
+        <file>cross.png</file>
+    </qresource>
+	<qresource prefix="/plugins/ProtezioneCivile" >
+        <file>help.png</file>
+    </qresource>
+	<qresource prefix="/plugins/ProtezioneCivile" >
+        <file>VERTICAL_SOLUTIONS.png</file>
+    </qresource>
+</RCC>

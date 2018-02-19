@@ -1,0 +1,61 @@
+# This file contains metadata for your plugin. Since 
+# version 2.0 of QGIS this is the proper way to supply 
+# information about a plugin. The old method of 
+# embedding metadata in __init__.py will 
+# is no longer supported since version 2.0.
+
+# This file should be included when you package your plugin.# Mandatory items:
+
+[general]
+name=ProtezioneCivile
+qgisMinimumVersion=2.14
+description=Intersezione tra aree a rischio e obiettivi sensibili
+version=1.2
+author=A.R.Gaeta/Vertical Srl
+email=info@vertical.digital
+release_date=2017/03/21
+
+about=Cerca indirizzi e interseca buffer con numeri civici per recuperare popolazione
+
+tracker=localhost
+repository=localhost
+# End of mandatory metadata
+
+# Recommended items:
+
+# Uncomment the following line and add your changelog:
+# changelog=
+	1.2 : - cambiato percorso per recupero info metadata da assoluto a relativo: funzione run_help
+	1.1 : - risolto baco sulla selezione dell'elemento per intersezione coi civici, prima non veniva considerata la selezione. Ho modificato la funzione ecco_la_intersezione passando le features selezionate invece del solo layer_origine
+		  - cambiato percorso per recupero qml da assoluto a relativo
+		  - disabilitata scrittura manuale del percorso di output del csv
+	1.0 : - aggiunta di messaggi di errore nel caso i layer necessari al plugin non siano presenti nel progetto con i nomi corretti
+		  - aggiunta possibilita' di esportare i resdienti intercettati sia dalla dialog di ricerca civici sia dalla dock utilizzando dei civici selezionati manualmente in mappa
+		  - aggiunta la possibilita' per l'utente di creare un layer puntuale
+		  - aggiunta dell'header nel file csv esportato e dei campi indirizzo e codice_famiglia
+    0.6 : - corretti alcuni bachi
+          - possibilita di scegliere il percorso di export del file csv
+          - elenco layer di origine solo i layer che contengono la parola "int_"
+          - risolto baco su selezione elemento da layer esistente
+    0.5 : - aggiunto tab di help
+    0.4 : - esportazione dei risultati come csv
+          - lascio gli elementi selezionati sia nella ricerca del civico che nell'intersezione
+    0.3 : - Tolta la scelta del layer destinazione, ponendo come fissi i layer Fabbricati, Strade, Civici e Strade.
+          - Tolti dal dropdown menu di origine i layer scritti prima
+          - Introdotta la funzione "buffer"
+          - Risolto il problema delle singlequote nella ricerca della via
+    0.2 : - Prima bozza per tirare fuori delle statistiche sulla poplazione coinvolta incrociando i CIVICI con la vista V_LAC_ANAGRAFE da DB
+    0.1 : - Prima versione in bozza. Cerca indirizzo e intersezione tra 2 layer presenti in mappa o creato dall'utente
+
+# Tags are comma separated with spaces allowed
+tags=intersect, risk
+
+homepage=yahoo.com
+category=Plugins
+icon=icon.png
+# experimental flag
+experimental=True
+
+# deprecated flag (applies to the whole plugin, not just a single version)
+deprecated=False
+
